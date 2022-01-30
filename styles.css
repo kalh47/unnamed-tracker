@@ -1,0 +1,89 @@
+:root {
+    /* Site colour scheme */
+    --black: #0B0C10;
+    --grey: #1F2833;
+    --white: #C5C6C7;
+    --blue: #66FCF1;
+    --darkblue: #45A29E;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+    /* background-color: #14181c;
+    color: white; */
+}
+
+.media_item_list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 10px;
+    /* media trigger wouldn't activate */
+    /* grid-template-columns: repeat(2, 1fr);
+    @media (min-width: 300px) {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    } */
+}
+
+.title {
+    /*IGNORE (for this case 3em works) - default line height is ~1.2 so 3 line max height is 3.6*/
+    max-height: 3em; 
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    /* overflow: hidden; */
+    text-overflow: ellipsis;
+}
+
+.s_title {
+    max-height: 2.4em; 
+    margin: 0;
+    font-style: italic;
+    text-align: center;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+    visibility: collapse;
+}
+
+.media_item {
+    width: 150px;
+    height: 275px;
+    /* display: block; */
+    font-size: 15px;
+    line-height: 100%;
+    /* border-color: black;
+    border-width: 2px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+}
+
+.poster {
+    height: auto;
+    max-width: 100%;
+    /* Vertically center using transform to shift it into place */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);    
+}
+
+.poster_container {
+    height: 225px;
+    width: 100%;
+    /* background-color: var(--black); */
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column-reverse;
+    /* part of vertically centering */
+    position: relative;
+}
+
+
+/* .overlay {
+    
+} */
